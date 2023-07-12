@@ -338,8 +338,10 @@ class HomeController extends Controller
     }
     public function profile(){
         $message = Message::paginate(3);
+        $messageCount = Message::count();
         return view('profile',[
-            'message' => $message
+            'message' => $message,
+            'messageCount' => $messageCount
         ]);
     }
     public function export() 

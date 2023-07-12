@@ -98,3 +98,6 @@ Route::get('/showProfile', 'HomeController@profile');
 Route::get('/checkUser1/{id}', 'HomeController@checkUser1');
 Route::get('/checkUser2/{id}', 'HomeController@checkUser2');
 Route::get('/checkedMessage/{id}', 'HomeController@checked');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
